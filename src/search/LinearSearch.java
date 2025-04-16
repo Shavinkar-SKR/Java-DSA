@@ -1,3 +1,5 @@
+package search;
+
 public class LinearSearch {
 
     public static int usingWhileLoop(int[] numbers, int findMe){
