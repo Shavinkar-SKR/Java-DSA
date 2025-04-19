@@ -1,28 +1,24 @@
 package sort;
 
-import java.util.*;
-
 public class MergeSort {
-    public static void main(String[]a) {
-        Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
-        int[] relics = new int[N];
-        for (int i = 0; i < N; i++){
-            relics[i] = scanner.nextInt();
-        }
-        Arrays.sort(relics);
-        int[] result = new int[N];
-        int sum = 0;
+    public static void main(String[] args) {
+        int[] nums = {1,2,5,8,9    ,3,4,6,7};
+        int mid = nums.length/2;
+        int[] arr1 = new int[mid];
+        //int[] arr2 = new int[nums.length-mid];
 
-        for (int i = 0; i < N; i++) {
-            sum += (i % 2 == 0 ? 1 : -1) * relics[N - 1 - i];
-            result[i] = sum;
-        }
+        for (int i = 0; i <= mid; i++) {
 
-        for (int i = 0; i < N; i++) {
-            System.out.print(result[i] + " ");
-        }
-        scanner.close();
+            for(int j =mid+1; j< nums.length; j++){
+                //
+                if(nums[i]<nums[j]){
+                    arr1[i] = nums[i];
+                    break;
+                }else{
+                    arr1[i] = nums[j];
 
+                }
+            }
+        }
     }
 }
