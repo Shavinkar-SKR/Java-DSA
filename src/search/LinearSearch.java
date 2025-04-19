@@ -15,7 +15,7 @@ public class LinearSearch {
             if(nums[i]==findMe){
                 return i;
             }
-        }return -1;//return failure
+        }return -1;
     }
 
     public static void main(String[] args) {
