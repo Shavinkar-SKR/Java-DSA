@@ -6,7 +6,11 @@ public class LinkedList {
     private LinkedList next;
     private LinkedList previous;
 
-    public LinkedList(this){
-        this.next = this;
+    public void setData(LinkedList newData){
+        this.next = newData;
+    }
+
+    public int getData(){
+        return this.data;
     }
 }
