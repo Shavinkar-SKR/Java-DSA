@@ -24,12 +24,7 @@ public class MergeSort {
     }
 
     public static int[] merge(int[] left, int[] right){
-        //Create temp arrays
-        //Copy data to temp arrays
-        //Merge temp arrays
-        //Copy remaining elements of leftArray[] if any
-        //Copy remaining elements of rightArray[] if any
-
+        
         int i = 0;
         int j = 0;
         int k = 0;
