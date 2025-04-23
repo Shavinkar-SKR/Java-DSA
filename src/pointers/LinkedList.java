@@ -10,6 +10,19 @@ public class LinkedList {
         this.size = 0;
     }
 
+    public void insertFirst(int data){
+
+        Node node = new Node(data);
+        node.next = head;
+        head = node;
+
+        if(tail == null){
+            tail = head;
+        }
+
+        size += 1;
+    }
+
     private class Node{
 
         private Node next;
