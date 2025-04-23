@@ -24,6 +24,15 @@ public class LinkedList {
     }
 
     public void insertLast(int data){
+
+        //This is checked that beforehand if the method insertLast is called and passing the value
+        //it should store in the head node, since tail node is empty right when the list is initialized
+        //Added a condition to check if tail node is null, if it is then call the insertFirst() to store that passed value
+        if(tail == null){
+            insertFirst(data);
+            return;
+        }
+
         Node node = new Node(data);
         tail.next = node;
         tail = node;
