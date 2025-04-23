@@ -74,7 +74,21 @@ public class LinkedList {
         if(head == null){
             tail = null;
         }
+        size--;
         return value;
+    }
+
+    public int deleteLast(){
+        Node temp = head; //stores the head node to a temp node to iterate
+        for (int i = 0; i < size-1; i++) {
+            temp = temp.next;
+        }
+        tail = temp; //tail node is set to second last index of list
+        temp = temp.next; //to track the removed value
+        tail.next = null; //last element is set to null.
+        size--; //reduces the size of the list by 1
+        int value = temp.data;
+        return value; //returns the removed value
     }
 
     private class Node{
