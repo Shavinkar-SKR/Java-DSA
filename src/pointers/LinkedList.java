@@ -23,6 +23,24 @@ public class LinkedList {
         size += 1;
     }
 
+    public void insertAt(int data, int index){
+
+        if(index == 0){
+            insertFirst(data);
+        } else if (index == size) {
+            insertLast(data);
+        }else{
+            Node temp = head;
+            for (int i = 0; i < index; i++) {
+                temp = temp.next;
+            }
+
+            Node node = new Node(data, temp.next);
+            temp.next = node;
+        }
+
+    }
+
     public void insertLast(int data){
 
         //This is checked that beforehand if the method insertLast is called and passing the value
