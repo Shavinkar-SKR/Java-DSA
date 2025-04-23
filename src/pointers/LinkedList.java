@@ -23,6 +23,13 @@ public class LinkedList {
         size += 1;
     }
 
+    public void insertLast(int data){
+        Node node = new Node(data);
+        tail.next = node;
+        tail = node;
+        size++;
+    }
+
     public void display(){
 
         Node temp = head;

@@ -11,7 +11,7 @@ public class Main {
         list.insertFirst(6);
         list.insertFirst(8);
         list.insertFirst(1);
-
+        list.insertLast(10);
         list.display();
     }
 }
