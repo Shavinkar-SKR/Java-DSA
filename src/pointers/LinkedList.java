@@ -79,6 +79,11 @@ public class LinkedList {
     }
 
     public int deleteLast(){
+
+        if(size<=1){
+            return deleteFirst();
+        }
+
         Node temp = head; //stores the head node to a temp node to iterate
         for (int i = 0; i < size-1; i++) {
             temp = temp.next;
