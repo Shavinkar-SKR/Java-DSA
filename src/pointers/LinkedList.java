@@ -67,6 +67,16 @@ public class LinkedList {
         System.out.println("END");
     }
 
+    public int deleteFirst(){
+        int value = head.data;
+        head = head.next;
+
+        if(head == null){
+            tail = null;
+        }
+        return value;
+    }
+
     private class Node{
 
         private Node next;

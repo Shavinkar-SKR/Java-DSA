@@ -17,5 +17,9 @@ public class Main {
         list.insertAt(12, 3);
 
         list.display();
+
+        System.out.println(list.deleteFirst());
+
+        list.display();
     }
 }
