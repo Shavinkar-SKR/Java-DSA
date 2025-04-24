@@ -37,8 +37,9 @@ public class Main {
 
         list.display();
 
-        list.insertLast(10);
+        list.insert(8, 77);
 
         list.display();
+
     }
 }

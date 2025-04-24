@@ -3,12 +3,6 @@ package pointers;
 public class DoublyLinkedList {
 
     private Node head;
-    private Node tail;
-    private int size;
-
-    public DoublyLinkedList(){
-        this.size = 0;
-    }
 
     public void insertFirst(int value){
         Node node = new Node(value);
@@ -18,10 +12,37 @@ public class DoublyLinkedList {
             head.prev = node;
         }
         head = node;
-        size++;
     }
 
+    public Node find(int val){
+        Node node = head;
+        while(node != null){
+            if(node.value == val){
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
 
+    public void insert(int after, int val){
+
+        Node p = find(after);
+
+        if(p==null){
+            System.out.println("Value does not exist");
+        }
+
+        Node node = new Node(val);
+        node.next = p.next;
+        if(p.next.prev!=null){
+            p.next.prev = node;
+        }
+        p.next = node;
+        node.prev = p;
+
+
+    }
 
     public void insertLast(int value){
         Node node = new Node(value);
