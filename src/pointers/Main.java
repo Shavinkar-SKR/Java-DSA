@@ -16,10 +16,15 @@ public class Main {
 
         list.insertAt(12, 3);
 
+//        list.display();
+//        System.out.println(list.deleteFirst()); //eliminates the first element
+//        list.display();
+//        System.out.println(list.deleteLast()); //eliminates the last element
         list.display();
-        System.out.println(list.deleteFirst()); //eliminates the first element
+
+        list.deleteAt(6);
+
         list.display();
-        System.out.println(list.deleteLast()); //eliminates the last element
-        list.display();
+
     }
 }

@@ -38,7 +38,6 @@ public class LinkedList {
             Node node = new Node(data, temp.next);
             temp.next = node;
         }
-
     }
 
     public void insertLast(int data){
@@ -76,6 +75,27 @@ public class LinkedList {
         }
         size--;
         return value;
+    }
+
+    public int deleteAt(int index){
+
+        if(index == 0){
+            return deleteFirst();
+        }
+
+        if(index == size){
+            return deleteLast();
+        }
+
+        Node temp = head;
+        for (int i = 0; i < index-1; i++) {
+            temp = temp.next;
+        }
+
+        temp.next = temp.next.next;
+
+        size--;
+        return temp.next.data;
     }
 
     public int deleteLast(){
