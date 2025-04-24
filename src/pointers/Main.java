@@ -29,5 +29,12 @@ public class Main {
 
         DoublyLinkedList list = new DoublyLinkedList();
 
+        list.insertFirst(5);
+        list.insertFirst(2);
+        list.insertFirst(6);
+        list.insertFirst(8);
+        list.insertFirst(1);
+
+        list.display();
     }
 }
