@@ -36,5 +36,9 @@ public class Main {
         list.insertFirst(1);
 
         list.display();
+
+        list.insertLast(10);
+
+        list.display();
     }
 }
