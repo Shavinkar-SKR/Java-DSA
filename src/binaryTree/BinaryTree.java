@@ -1,6 +1,5 @@
 package binaryTree;
 
-import java.nio.file.NotDirectoryException;
 import java.util.Scanner;
 
 public class BinaryTree {
@@ -60,17 +59,5 @@ public class BinaryTree {
         System.out.println(indent + node.value);
         display(node.left, indent + '\t');
         display(node.right, indent + '\t');
-    }
-
-    public boolean check(){
-        Scanner scanner = new Scanner(System.in);
-        boolean value;
-        String answer = scanner.nextLine();
-        if(answer.equals("yes")){
-            value = true;
-        }else {
-            value = false;
-        }
-        return value;
     }
 }
