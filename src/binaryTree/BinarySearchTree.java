@@ -42,4 +42,18 @@ public class BinarySearchTree {
         return node;
     }
 
+    public void display(){
+        display(this.root, "Root node: ");
+    }
+
+    private void display(Node node, String details){
+        if(node == null){
+            return;
+        }
+        System.out.println(details + node.value);
+
+        display(node.left, "Left Child of "+ node.value + " : ");
+        display(node.right, "Right Child of "+ node.value + " : ");
+    }
+    
 }
