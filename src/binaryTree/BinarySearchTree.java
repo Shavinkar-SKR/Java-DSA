@@ -55,5 +55,10 @@ public class BinarySearchTree {
         display(node.left, "Left Child of "+ node.value + " : ");
         display(node.right, "Right Child of "+ node.value + " : ");
     }
-    
+
+    public void populate(int[] nums){
+        for (int i = 0; i < nums.length; i++) {
+            insert(nums[i]);
+        }
+    }
 }
